@@ -22,5 +22,8 @@ Charts: Activity and goal progress visualizations for detailed insights
 
 ## How to run 
 
+### Start the server:
 `nodemon server.js`
+
+### Run the frontend:
 `npm run dev`
