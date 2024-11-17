@@ -1,14 +1,9 @@
-// src/App.jsx
+// src/services/App.jsx
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Landing from "./pages/Landing";
-import Dashboard from "./components/Dashboard";
-import Activities from "./pages/Activities";
-import Goals from "./pages/Goals";
-
-// Import the GIF image
-import gifImage from "../public/200w-unscreen.gif"; // Update the path if necessary
-// Import the fitness person image
-import fitnessPersonImage from "../public/man.png"; // Update the path if necessary
+import Home from "../src/pages/Home";
+import Dashboard from "../src/components/Dashboard";
+import Activities from "../src/pages/Activities";
+import Goals from "../src/pages/Goals";
 
 const App = () => {
   return (
@@ -16,14 +11,12 @@ const App = () => {
       <div className="app-container flex flex-col min-h-screen bg-[var(--bg-color)] text-[var(--text-color)]">
         {/* Navbar */}
         <header className="header flex items-center justify-between px-6 py-2 mt-4">
-          {/* Logo on the Left */}
           <div className="flex-none">
             <h1 className="text-2xl font-bold text-[var(--primary-color)]">
               <Link to="/">Fitness Tracker</Link>
             </h1>
           </div>
 
-          {/* Centered Nav Links */}
           <div className="flex-grow flex justify-center">
             <div className="flex items-center backdrop-blur-lg bg-[rgba(255,255,255,0.1)] px-6 py-3 rounded-full shadow-lg space-x-4">
               <Link
@@ -58,32 +51,10 @@ const App = () => {
           </div>
         </header>
 
-        {/* Main Content with Left and Right Margin */}
+        {/* Main Content */}
         <main className="flex-grow container mx-auto px-12 py-8 text-center relative">
           <Routes>
-            <Route
-              path="/"
-              element={
-                <>
-                  <Landing />
-                  {/* Motivational Quote and Fitness Person Image only on Homepage */}
-                  <div className="flex justify-between items-center mt-6">
-                    {/* Motivational Quote on the Left */}
-                    <div className="text-left text-[var(--primary-color)] font-bold text-xl w-1/2 px-8">
-                      "Your body can stand almost anything. It’s your mind that
-                      you have to convince."
-                    </div>
-
-                    {/* Fitness Person Image on the Right */}
-                    <img
-                      src={fitnessPersonImage}
-                      alt="Fitness Person"
-                      className="w-1/4 h-auto px-6"
-                    />
-                  </div>
-                </>
-              }
-            />
+            <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/goals" element={<Goals />} />
@@ -97,13 +68,6 @@ const App = () => {
           </div>
           <div className="text-sm">By Khushi Malhotra</div>
         </footer>
-
-        {/* GIF in the top-right corner */}
-        <img
-          src={gifImage}
-          alt="Decorative GIF"
-          className="fixed top-0 right-0 m-4 w-16 h-16 z-50" // Adjust width and height as needed
-        />
       </div>
     </Router>
   );
