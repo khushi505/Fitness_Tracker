@@ -29,6 +29,7 @@ Charts: Activity and goal progress visualizations for detailed insights
 `npm run dev`
 
 
+## Application Visual Overview
 ![image](https://github.com/user-attachments/assets/7613f003-b5f0-4b27-a9be-78e9a823014d)
 ![image](https://github.com/user-attachments/assets/5fddb681-d06e-4359-a242-685b1abd8904)
 ![image](https://github.com/user-attachments/assets/1db655ba-9881-40a1-8941-be1eb8ce0070)
