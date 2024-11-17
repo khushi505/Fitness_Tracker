@@ -27,3 +27,10 @@ Charts: Activity and goal progress visualizations for detailed insights
 
 ### Run the frontend:
 `npm run dev`
+
+
+![image](https://github.com/user-attachments/assets/7613f003-b5f0-4b27-a9be-78e9a823014d)
+![image](https://github.com/user-attachments/assets/5fddb681-d06e-4359-a242-685b1abd8904)
+![image](https://github.com/user-attachments/assets/1db655ba-9881-40a1-8941-be1eb8ce0070)
+![image](https://github.com/user-attachments/assets/a6c9a61f-4d10-42cd-8f59-7f8ef205beaf)
+![image](https://github.com/user-attachments/assets/b598a5db-33f7-4b68-8aaf-482a0f6ff8ec)
