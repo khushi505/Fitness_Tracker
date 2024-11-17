@@ -7,6 +7,8 @@ import Goals from "./pages/Goals";
 
 // Import the GIF image
 import gifImage from "../public/200w-unscreen.gif"; // Update the path if necessary
+// Import the fitness person image
+import fitnessPersonImage from "../public/man.png"; // Update the path if necessary
 
 const App = () => {
   return (
@@ -57,9 +59,31 @@ const App = () => {
         </header>
 
         {/* Main Content with Left and Right Margin */}
-        <main className="flex-grow container mx-auto px-12 py-8 text-center">
+        <main className="flex-grow container mx-auto px-12 py-8 text-center relative">
           <Routes>
-            <Route path="/" element={<Landing />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Landing />
+                  {/* Motivational Quote and Fitness Person Image only on Homepage */}
+                  <div className="flex justify-between items-center mt-6">
+                    {/* Motivational Quote on the Left */}
+                    <div className="text-left text-[var(--primary-color)] font-bold text-xl w-1/2 px-8">
+                      "Your body can stand almost anything. It’s your mind that
+                      you have to convince."
+                    </div>
+
+                    {/* Fitness Person Image on the Right */}
+                    <img
+                      src={fitnessPersonImage}
+                      alt="Fitness Person"
+                      className="w-1/4 h-auto px-6"
+                    />
+                  </div>
+                </>
+              }
+            />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/activities" element={<Activities />} />
             <Route path="/goals" element={<Goals />} />
@@ -67,10 +91,11 @@ const App = () => {
         </main>
 
         {/* Footer */}
-        <footer className="footer bg-[var(--footer-bg-color)] text-[var(--footer-text-color)] py-6 text-center">
-          <div className="container mx-auto text-sm">
+        <footer className="footer bg-[var(--footer-bg-color)] text-[var(--footer-text-color)] py-4 px-6 text-center flex justify-between items-center">
+          <div className="text-sm">
             &copy; {new Date().getFullYear()} Fitness Tracker
           </div>
+          <div className="text-sm">By Khushi Malhotra</div>
         </footer>
 
         {/* GIF in the top-right corner */}
