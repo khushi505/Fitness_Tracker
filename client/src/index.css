@@ -1,0 +1,51 @@
+/* src/index.css or tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Dark Theme */
+:root {
+  --bg-color: #121212; /* Background color */
+  --text-color: #e0e0e0; /* Text color */
+  --header-bg-color: rgba(18, 18, 18, 0.7);
+  --footer-bg-color: #000000; /* Footer background */
+  --footer-text-color: #fbbf24; /* Footer text color */
+  --card-bg-color: #2d2d2d; /* Card background */
+  --primary-color: #ffffff; /* Primary color for main text */
+  --accent-color: #3b82f6; /* Accent color */
+  --button-highlight-color: #fcd34d; /* Button highlight color */
+  --heading-color: #fbbf24; /* Heading color */
+}
+
+/* Apply theme variables */
+body,
+.app-container {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* General styling for headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--footer-bg-color);
+  color: var(--footer-text-color);
+}
+
+/* Card and Chart styling */
+.card,
+.chart {
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
